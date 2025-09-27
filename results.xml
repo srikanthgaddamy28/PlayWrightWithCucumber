@@ -1,0 +1,71 @@
+<testsuites id="" name="" tests="9" failures="0" skipped="0" errors="0" time="82.069272">
+<testsuite name="example.spec.ts" timestamp="2025-09-26T18:28:28.873Z" hostname="chromium" tests="3" failures="0" skipped="0" time="25.341" errors="0">
+<testcase name="login page has expected title" classname="example.spec.ts" time="5.289">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/example-login-page-has-expected-title-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="login with valid credentials" classname="example.spec.ts" time="11.373">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/example-login-with-valid-credentials-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="login with invalid credentials shows error" classname="example.spec.ts" time="8.679">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/example-login-with-invalid-credentials-shows-error-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2025-09-26T18:28:28.873Z" hostname="firefox" tests="3" failures="0" skipped="0" time="26.539" errors="0">
+<testcase name="login page has expected title" classname="example.spec.ts" time="6.777">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/example-login-page-has-expected-title-firefox/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="login with valid credentials" classname="example.spec.ts" time="9.996">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/example-login-with-valid-credentials-firefox/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="login with invalid credentials shows error" classname="example.spec.ts" time="9.766">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/example-login-with-invalid-credentials-shows-error-firefox/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2025-09-26T18:28:28.873Z" hostname="webkit" tests="3" failures="0" skipped="0" time="27.976" errors="0">
+<testcase name="login page has expected title" classname="example.spec.ts" time="6.987">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/example-login-page-has-expected-title-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="login with valid credentials" classname="example.spec.ts" time="9.82">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/example-login-with-valid-credentials-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="login with invalid credentials shows error" classname="example.spec.ts" time="11.169">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/example-login-with-invalid-credentials-shows-error-webkit/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

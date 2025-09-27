@@ -1,0 +1,163 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "orangehrm-homepage;tc001_login",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "TC001_Login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1050581083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I navigate to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"",
+            "match": {
+              "location": "features/steps/homepage.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6583043583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the page title should contain \"OrangeHRM\"",
+            "match": {
+              "location": "features/steps/homepage.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60134208
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 95445999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 3
+          },
+          {
+            "name": "@TC001_Login",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "orangehrm-homepage;tc002_validation_fields",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "TC002_Validation_fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 230504000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I navigate to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"",
+            "match": {
+              "location": "features/steps/homepage.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6026149208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I enter username \"Admin\" and password \"admin123\"",
+            "match": {
+              "location": "features/steps/homepage.steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2210311083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click the login button",
+            "match": {
+              "location": "features/steps/homepage.steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 95040333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the page should contain text \"Dashboard\"",
+            "match": {
+              "location": "features/steps/homepage.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3523656082
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 74933999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 8
+          },
+          {
+            "name": "@TC002_Validation_fields",
+            "line": 8
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "orangehrm-homepage",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "OrangeHRM homepage",
+    "tags": [],
+    "uri": "features/homepage.feature"
+  }
+]

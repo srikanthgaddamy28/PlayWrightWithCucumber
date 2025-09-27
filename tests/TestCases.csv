@@ -1,0 +1,4 @@
+TestName,URL,Execute,Browser
+Homepage Title,https://playwright.dev/,Yes,chromium
+Docs Header,https://playwright.dev/docs/intro,No,firefox
+API Navigation,https://playwright.dev/,Yes,webkit

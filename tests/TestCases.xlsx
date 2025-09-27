@@ -1,0 +1,4 @@
+TestName	URL	Execute	Browser
+Login Page Title	https://opensource-demo.orangehrmlive.com/web/index.php/auth/login	Yes	chromium
+Login Page Title	https://opensource-demo.orangehrmlive.com/web/index.php/auth/login	No	firefox
+Login Page Title	https://opensource-demo.orangehrmlive.com/web/index.php/auth/login	Yes	webkit
