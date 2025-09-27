@@ -10,4 +10,19 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npx playwright install --with-deps
-      - run: npx cucumber-js
+      - run: npx cucumber-js --format json:reports/report.json
+      - name: Upload Cucumber HTML Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-html-report
+          path: reports/report.html
+      - name: Upload Screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: reports/screenshots/
+      - name: Upload Videos
+        uses: actions/upload-artifact@v4
+        with:
+          name: videos
+          path: reports/videos/
