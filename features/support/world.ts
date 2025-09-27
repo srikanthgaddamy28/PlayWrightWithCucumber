@@ -16,7 +16,7 @@ class CustomWorld extends World {
     } else {
       browserLauncher = chromium;
     }
-    this.browser = await browserLauncher.launch({ headless: false });
+    this.browser = await browserLauncher.launch({ headless: true });
   }
   async closeBrowser() {
     if (this.browser) {
