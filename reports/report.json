@@ -14,7 +14,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1050581083
+              "duration": 311667
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 847202500
             }
           },
           {
@@ -23,11 +31,11 @@
             "line": 5,
             "name": "I navigate to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"",
             "match": {
-              "location": "features/steps/homepage.steps.ts:7"
+              "location": "features/steps/homepage.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 6583043583
+              "duration": 6486971874
             }
           },
           {
@@ -36,11 +44,11 @@
             "line": 6,
             "name": "the page title should contain \"OrangeHRM\"",
             "match": {
-              "location": "features/steps/homepage.steps.ts:14"
+              "location": "features/steps/homepage.steps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 60134208
+              "duration": 41235125
             }
           },
           {
@@ -48,7 +56,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 95445999
+              "duration": 75027957
             }
           }
         ],
@@ -76,7 +84,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 230504000
+              "duration": 26249
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 271148540
             }
           },
           {
@@ -85,11 +101,11 @@
             "line": 10,
             "name": "I navigate to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"",
             "match": {
-              "location": "features/steps/homepage.steps.ts:7"
+              "location": "features/steps/homepage.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 6026149208
+              "duration": 4943659707
             }
           },
           {
@@ -98,11 +114,11 @@
             "line": 11,
             "name": "I enter username \"Admin\" and password \"admin123\"",
             "match": {
-              "location": "features/steps/homepage.steps.ts:24"
+              "location": "features/steps/homepage.steps.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 2210311083
+              "duration": 1911612250
             }
           },
           {
@@ -111,11 +127,11 @@
             "line": 12,
             "name": "I click the login button",
             "match": {
-              "location": "features/steps/homepage.steps.ts:30"
+              "location": "features/steps/homepage.steps.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 95040333
+              "duration": 95994374
             }
           },
           {
@@ -124,11 +140,11 @@
             "line": 13,
             "name": "the page should contain text \"Dashboard\"",
             "match": {
-              "location": "features/steps/homepage.steps.ts:35"
+              "location": "features/steps/homepage.steps.ts:48"
             },
             "result": {
               "status": "passed",
-              "duration": 3523656082
+              "duration": 4020817167
             }
           },
           {
@@ -136,7 +152,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 74933999
+              "duration": 70687624
             }
           }
         ],

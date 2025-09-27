@@ -5,32 +5,29 @@ const fs = require('fs');
 const path = require('path');
 
 
-// Collect all screenshot files
+
+// Collect all screenshot files grouped by scenario
 const screenshotsDir = path.join(__dirname, 'screenshots');
 let screenshotsHtml = '';
 if (fs.existsSync(screenshotsDir)) {
-  const files = fs.readdirSync(screenshotsDir);
-  screenshotsHtml = files.map(file => `<img src="screenshots/${file}" style="max-width:400px; margin:10px;" />`).join('');
+  const scenarioFolders = fs.readdirSync(screenshotsDir).filter(f => fs.statSync(path.join(screenshotsDir, f)).isDirectory());
+  screenshotsHtml = scenarioFolders.map(folder => {
+    const files = fs.readdirSync(path.join(screenshotsDir, folder)).filter(file => file.endsWith('.png'));
+    const imgs = files.map(file => `<img src="screenshots/${folder}/${file}" style="max-width:400px; margin:10px;" />`).join('');
+    return `<div><b>${folder.replace(/_/g, ' ')}</b><br>${imgs}</div>`;
+  }).join('<hr>');
 }
 
-// Collect all video files from test-results
-const testResultsDir = path.join(__dirname, '../../test-results');
+
+// Collect all video files from reports/videos
+const videosDir = path.join(__dirname, 'videos');
 let videosHtml = '';
-if (fs.existsSync(testResultsDir)) {
-  const subdirs = fs.readdirSync(testResultsDir);
-  let videoFiles = [];
-  subdirs.forEach(subdir => {
-    const subdirPath = path.join(testResultsDir, subdir);
-    if (fs.statSync(subdirPath).isDirectory()) {
-      const files = fs.readdirSync(subdirPath);
-      files.forEach(file => {
-        if (file.endsWith('.webm')) {
-          videoFiles.push(`test-results/${subdir}/${file}`);
-        }
-      });
-    }
-  });
-  videosHtml = videoFiles.map(file => `<video src="${file}" controls style="max-width:400px; margin:10px;"></video>`).join('');
+if (fs.existsSync(videosDir)) {
+  const files = fs.readdirSync(videosDir);
+  videosHtml = files
+    .filter(file => file.endsWith('.webm'))
+    .map(file => `<video src="videos/${file}" controls style="max-width:400px; margin:10px;"></video>`)
+    .join('');
 }
 
 const options = {
@@ -40,7 +37,8 @@ const options = {
   reportSuiteAsScenarios: true,
   launchReport: true,
   metadata: {
-    'Screenshots': 'See below',
+    'Screenshots': screenshotsHtml,
+    'Videos': videosHtml
   },
   customData: {
     title: 'Artifacts',
