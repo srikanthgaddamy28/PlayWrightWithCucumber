@@ -16,7 +16,9 @@ class CustomWorld extends World {
     } else {
       browserLauncher = chromium;
     }
-    this.browser = await browserLauncher.launch({ headless: true });
+    // Run headless in CI/CD, headed in VS Code/local
+    const isCI = process.env.CI === 'true';
+    this.browser = await browserLauncher.launch({ headless: isCI });
   }
   async closeBrowser() {
     if (this.browser) {

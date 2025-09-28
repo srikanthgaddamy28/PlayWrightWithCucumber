@@ -6,7 +6,7 @@
         "description": "",
         "id": "orangehrm-homepage;tc001_login",
         "keyword": "Scenario",
-        "line": 4,
+        "line": 5,
         "name": "TC001_Login",
         "steps": [
           {
@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 304291
+              "duration": 329999
             }
           },
           {
@@ -22,33 +22,33 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 151484375
+              "duration": 488698790
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
+            "line": 6,
             "name": "I navigate to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"",
             "match": {
-              "location": "features/steps/homepage.steps.ts:16"
+              "location": "features/steps/homepage.steps.ts:69"
             },
             "result": {
               "status": "passed",
-              "duration": 5197520666
+              "duration": 5615189333
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 6,
+            "line": 7,
             "name": "the page title should contain \"OrangeHRM\"",
             "match": {
-              "location": "features/steps/homepage.steps.ts:24"
+              "location": "features/steps/homepage.steps.ts:81"
             },
             "result": {
               "status": "passed",
-              "duration": 50056332
+              "duration": 41548084
             }
           },
           {
@@ -56,18 +56,18 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 16077459
+              "duration": 77876792
             }
           }
         ],
         "tags": [
           {
             "name": "@smoke",
-            "line": 3
+            "line": 4
           },
           {
             "name": "@TC001_Login",
-            "line": 3
+            "line": 4
           }
         ],
         "type": "scenario"
@@ -76,7 +76,7 @@
         "description": "",
         "id": "orangehrm-homepage;tc002_validation_fields",
         "keyword": "Scenario",
-        "line": 9,
+        "line": 10,
         "name": "TC002_Validation_fields",
         "steps": [
           {
@@ -84,7 +84,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 24042
+              "duration": 24333
             }
           },
           {
@@ -92,59 +92,59 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 53673458
+              "duration": 249290791
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 10,
+            "line": 11,
             "name": "I navigate to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"",
             "match": {
-              "location": "features/steps/homepage.steps.ts:16"
+              "location": "features/steps/homepage.steps.ts:69"
             },
             "result": {
               "status": "passed",
-              "duration": 5176229084
+              "duration": 5796161374
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 11,
+            "line": 12,
             "name": "I enter username \"Admin\" and password \"admin123\"",
             "match": {
-              "location": "features/steps/homepage.steps.ts:35"
+              "location": "features/steps/homepage.steps.ts:95"
             },
             "result": {
               "status": "passed",
-              "duration": 3354800083
+              "duration": 3280622042
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 12,
+            "line": 13,
             "name": "I click the login button",
             "match": {
-              "location": "features/steps/homepage.steps.ts:42"
+              "location": "features/steps/homepage.steps.ts:106"
             },
             "result": {
               "status": "passed",
-              "duration": 103466792
+              "duration": 94528208
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 13,
+            "line": 14,
             "name": "the page should contain text \"Dashboard\"",
             "match": {
-              "location": "features/steps/homepage.steps.ts:48"
+              "location": "features/steps/homepage.steps.ts:116"
             },
             "result": {
               "status": "passed",
-              "duration": 3113978542
+              "duration": 2984571207
             }
           },
           {
@@ -152,25 +152,154 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 30125541
+              "duration": 81745958
             }
           }
         ],
         "tags": [
           {
             "name": "@regression",
-            "line": 8
+            "line": 9
           },
           {
             "name": "@TC002_Validation_fields",
-            "line": 8
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "orangehrm-homepage;tc003_invalidsearch_and_validsearch",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "TC003_InvalidSearch_And_ValidSearch",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43250
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 300402999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I navigate to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"",
+            "match": {
+              "location": "features/steps/homepage.steps.ts:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7423420957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I enter username \"Admin\" and password \"admin123\"",
+            "match": {
+              "location": "features/steps/homepage.steps.ts:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3310738249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click the login button",
+            "match": {
+              "location": "features/steps/homepage.steps.ts:106"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96937541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I search for \"invalidsearchterm\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the page should show no search results",
+            "match": {
+              "location": "features/steps/homepage.steps.ts:29"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I search for \"Paul Collings\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "the page should show valid search results",
+            "match": {
+              "location": "features/steps/homepage.steps.ts:54"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 95789958
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 16
+          },
+          {
+            "name": "@TC003_InvalidSearch_And_ValidSearch",
+            "line": 16
           }
         ],
         "type": "scenario"
       }
     ],
     "id": "orangehrm-homepage",
-    "line": 1,
+    "line": 2,
     "keyword": "Feature",
     "name": "OrangeHRM homepage",
     "tags": [],
