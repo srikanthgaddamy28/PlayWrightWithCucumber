@@ -52,7 +52,7 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Playwright Test Report"
-          to: recipient@example.com
+          to: srikanthgaddam2022@gmail.com
           from: ${{ secrets.EMAIL_USERNAME }}
           body: |
             Playwright CI/CD pipeline has completed.
