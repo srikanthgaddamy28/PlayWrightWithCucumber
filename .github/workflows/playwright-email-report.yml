@@ -1,0 +1,64 @@
+# GitHub Actions workflow to send Playwright reports (screenshots/videos) via email after CI/CD
+
+name: Playwright CI with Email Reports
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Playwright tests
+        run: npx cucumber-js
+
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: reports/screenshots/
+
+      - name: Upload videos
+        uses: actions/upload-artifact@v4
+        with:
+          name: videos
+          path: test-results/videos/
+
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-report
+          path: reports/report.html
+
+      - name: Send email with report links
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Playwright Test Report"
+          to: recipient@example.com
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: |
+            Playwright CI/CD pipeline has completed.
+            
+            Download screenshots: ${{ steps.upload-screenshots.outputs.artifact-url }}
+            Download videos: ${{ steps.upload-videos.outputs.artifact-url }}
+            View HTML report: ${{ steps.upload-html-report.outputs.artifact-url }}
+          secure: true
+          ignore_cert: true
